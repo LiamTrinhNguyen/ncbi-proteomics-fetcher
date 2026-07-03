@@ -1,0 +1,85 @@
+2026-07-03 20:42:59,554 - [ProteinPipeline.ProteinPipeline] - INFO: Pipeline initialized | Target Query: Homo sapiens[Organism] AND Insulin Receptor[Protein Name] | Limit: 5
+2026-07-03 20:43:01,598 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 1: Setup Workspace
+2026-07-03 20:43:01,600 - [ProteinPipeline.ProteinPipeline] - INFO: Run isolated working directories created for ID: 20260703_204257
+2026-07-03 20:43:01,600 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:01,600 - [ProteinPipeline.ProteinPipeline] - INFO: STEP 1: SETUP DIRECTORIES & NCBI - DETAILED ANALYSIS
+2026-07-03 20:43:01,601 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:01,601 - [ProteinPipeline.ProteinPipeline] - INFO: Step 1: Workspace & NCBI Setup
+Directories created successfully.
+2026-07-03 20:43:01,602 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+
+2026-07-03 20:43:01,602 - [ProteinPipeline.ProteinPipeline] - INFO: Step 1 completed successfully.
+2026-07-03 20:43:08,309 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 2: Search NCBI Database
+2026-07-03 20:43:08,309 - [ProteinPipeline.ProteinPipeline] - INFO: Querying NCBI Protein database for target: 'Homo sapiens[Organism] AND Insulin Receptor[Protein Name]'
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: Found 5 unique matching protein Accession IDs.
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: STEP 2: SEARCH NCBI PROTEIN DATABASE - DETAILED ANALYSIS
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: Step 2: NCBI Protein Search Results
+Total Hits: 5
+2026-07-03 20:43:08,416 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+
+2026-07-03 20:43:08,417 - [ProteinPipeline.ProteinPipeline] - INFO: Step 2 completed successfully.
+2026-07-03 20:43:08,422 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 3: Fetch Stream Vectors
+2026-07-03 20:43:08,422 - [ProteinPipeline.ProteinPipeline] - INFO: Streaming 5 entries to /workspaces/ncbi-proteomics-fetcher/data/run_20260703_204257/downloaded_proteins.fasta
+2026-07-03 20:43:08,985 - [ProteinPipeline.ProteinPipeline] - INFO: Raw FASTA stream complete.
+2026-07-03 20:43:08,986 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:08,986 - [ProteinPipeline.ProteinPipeline] - INFO: STEP 3: DOWNLOAD FASTA SEQUENCES - DETAILED ANALYSIS
+2026-07-03 20:43:08,986 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:08,987 - [ProteinPipeline.ProteinPipeline] - INFO: Step 3: Download Completed
+File: /workspaces/ncbi-proteomics-fetcher/data/run_20260703_204257/downloaded_proteins.fasta
+2026-07-03 20:43:08,987 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+
+2026-07-03 20:43:08,987 - [ProteinPipeline.ProteinPipeline] - INFO: Step 3 completed successfully.
+2026-07-03 20:43:08,991 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 4: Structure Polars Matrix
+2026-07-03 20:43:08,991 - [ProteinPipeline.ProteinPipeline] - INFO: Parsing FASTA into Polars DataFrame -> /workspaces/ncbi-proteomics-fetcher/result/run_20260703_204257/proteomics_data.csv
+2026-07-03 20:43:09,295 - [ProteinPipeline.ProteinPipeline] - INFO: Parsed 5 proteins.
+2026-07-03 20:43:09,296 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:09,296 - [ProteinPipeline.ProteinPipeline] - INFO: STEP 4: PARSE TO ANALYSIS-READY POLARS DATAFRAME - DETAILED ANALYSIS
+2026-07-03 20:43:09,296 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:09,297 - [ProteinPipeline.ProteinPipeline] - INFO: Step 4: Parse FASTA to Polars DataFrame
+Records: 5
+2026-07-03 20:43:09,297 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+
+2026-07-03 20:43:09,297 - [ProteinPipeline.ProteinPipeline] - INFO: Step 4 completed successfully.
+2026-07-03 20:43:09,322 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 5: Simulate Enzymatic Digestion
+2026-07-03 20:43:13,364 - [ProteinPipeline.ProteinPipeline] - INFO: Simulating in-silico TRYPSIN digestion -> /workspaces/ncbi-proteomics-fetcher/result/run_20260703_204257/digested_peptides.csv
+2026-07-03 20:43:13,383 - [ProteinPipeline.ProteinPipeline] - INFO: Generated 196 unique TRYPSIN peptides.
+2026-07-03 20:43:13,384 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:13,384 - [ProteinPipeline.ProteinPipeline] - INFO: STEP 5: SIMULATE ENZYMATIC DIGESTION - DETAILED ANALYSIS
+2026-07-03 20:43:13,384 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+2026-07-03 20:43:13,384 - [ProteinPipeline.ProteinPipeline] - INFO: Step 5: Dynamic In-Silico Digestion Complete
+Enzyme: TRYPSIN
+Fragments: 196
+2026-07-03 20:43:13,384 - [ProteinPipeline.ProteinPipeline] - INFO: ================================================================================
+
+2026-07-03 20:43:13,385 - [ProteinPipeline.ProteinPipeline] - INFO: Step 5 completed successfully.
+2026-07-03 20:43:13,388 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 6: Load & Clean MS Data
+2026-07-03 20:43:16,749 - [ProteinPipeline.ProteinPipeline] - INFO: Manufacturing mock mass spec expression table -> /workspaces/ncbi-proteomics-fetcher/result/run_20260703_204257/mock_ms_output.tsv
+2026-07-03 20:43:16,761 - [ProteinPipeline.ProteinPipeline] - INFO: Mock mass spectrometry output table successfully prepared.
+2026-07-03 20:43:16,762 - [ProteinPipeline.ProteinPipeline] - INFO: Cleaning raw proteomics search engine output...
+2026-07-03 20:43:16,827 - [ProteinPipeline.ProteinPipeline] - INFO: Filtered from 5 to 0 high-confidence proteins.
+2026-07-03 20:43:16,830 - [ProteinPipeline.ProteinPipeline] - INFO: Step 6 completed successfully.
+2026-07-03 20:43:16,835 - [ProteinPipeline.ProteinPipeline] - INFO: Starting Step 7: Differential Expression & Pathway Analysis
+2026-07-03 20:43:16,835 - [ProteinPipeline.ProteinPipeline] - INFO: Executing Log2 transformation and median normalization...
+2026-07-03 20:43:16,847 - [ProteinPipeline.ProteinPipeline] - INFO: Normalization complete.
+2026-07-03 20:43:16,848 - [ProteinPipeline.ProteinPipeline] - INFO: Computing differential expression...
+2026-07-03 20:43:16,850 - [ProteinPipeline.ProteinPipeline] - INFO: Isolated 0 highly altered marker candidates.
+2026-07-03 20:43:16,851 - [ProteinPipeline.ProteinPipeline] - INFO: Mapping protein network linkages...
+2026-07-03 20:43:16,851 - [ProteinPipeline.ProteinPipeline] - INFO: Pathway Mapping URL: https://string-db.org/cgi/network?identifiers=&species=9606
+2026-07-03 20:43:18,149 - [ProteinPipeline.ProteinPipeline] - INFO: Step 7 completed successfully.
+2026-07-03 20:43:18,149 - [ProteinPipeline.ProteinPipeline] - INFO: ============================================================
+2026-07-03 20:43:18,149 - [ProteinPipeline.ProteinPipeline] - INFO: PIPELINE EXECUTION COMPLETED SUCCESSFULLY!
+2026-07-03 20:43:18,149 - [ProteinPipeline.ProteinPipeline] - INFO: ============================================================
+2026-07-03 20:43:18,150 - [ProteinPipeline.ProteinPipeline] - INFO: ============================================================
+ PROTEIN PIPELINE: PIPELINE EXECUTION COMPLETED SUCCESSFULLY!
+============================================================
+Run Tracking Token : 20260703_204257
+Search Constraints : Homo sapiens[Organism] AND Insulin Receptor[Protein Name]
+Raw FASTA Stream   : data/run_20260703_204257/downloaded_proteins.fasta
+Protein Matrix     : result/run_20260703_204257/proteomics_data.csv
+Digested Peptides  : result/run_20260703_204257/digested_peptides.csv
+Cleaned MS Data    : result/run_20260703_204257/cleaned_proteomics.tsv
+Differential Markers: result/run_20260703_204257/differential_markers.tsv
+System Log File    : log/pipeline_20260703_204257.log
+Pipeline finished. Ready for downstream proteomics / mass spectrometry analysis!
