@@ -1,0 +1,8 @@
+name: proteomics-fetcher
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas>=2.0.0
+  - biopython>=1.80
