@@ -75,8 +75,4 @@ python proteomics_analysis/fetch_proteome.py
 ## Author
 Liam TrinhNguyen
 Data Scientist, Wisconsin State Laboratory of Hygiene (WSLH)
-<<<<<<< Updated upstream
-Bioinformatics and Computational Biology, M.S.
-=======
-Bioinformatics and Computational Biology, M.S.
->>>>>>> Stashed changes
+
